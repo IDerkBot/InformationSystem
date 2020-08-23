@@ -1,6 +1,6 @@
 ﻿namespace InformationSystem
 {
-    partial class Form1
+    partial class Auth
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.LogInButton = new InformationSystem.Controls.DecaButton();
-            this.decaTextBox1 = new InformationSystem.Controls.DecaTextBox();
-            this.decaTextBox2 = new InformationSystem.Controls.DecaTextBox();
+            this.LoginText = new InformationSystem.Controls.DecaTextBox();
+            this.PasswordText = new InformationSystem.Controls.DecaTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -76,8 +76,8 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.LogInButton);
-            this.panel2.Controls.Add(this.decaTextBox1);
-            this.panel2.Controls.Add(this.decaTextBox2);
+            this.panel2.Controls.Add(this.LoginText);
+            this.panel2.Controls.Add(this.PasswordText);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -99,40 +99,41 @@
             this.LogInButton.Size = new System.Drawing.Size(150, 40);
             this.LogInButton.TabIndex = 4;
             this.LogInButton.Text = "Войти";
+            this.LogInButton.Click += new System.EventHandler(this.LogInButton_Click);
             // 
-            // decaTextBox1
+            // LoginText
             // 
-            this.decaTextBox1.BackColor = System.Drawing.Color.White;
-            this.decaTextBox1.BorderColor = System.Drawing.Color.LightBlue;
-            this.decaTextBox1.BorderColorNotActive = System.Drawing.Color.Blue;
-            this.decaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.decaTextBox1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
-            this.decaTextBox1.FontTextPreview = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Bold);
-            this.decaTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.decaTextBox1.Location = new System.Drawing.Point(41, 55);
-            this.decaTextBox1.Name = "decaTextBox1";
-            this.decaTextBox1.Size = new System.Drawing.Size(250, 40);
-            this.decaTextBox1.TabIndex = 1;
-            this.decaTextBox1.TextInput = "";
-            this.decaTextBox1.TextPreview = "Логин";
-            this.decaTextBox1.UseSystemPasswordChar = false;
+            this.LoginText.BackColor = System.Drawing.Color.White;
+            this.LoginText.BorderColor = System.Drawing.Color.LightBlue;
+            this.LoginText.BorderColorNotActive = System.Drawing.Color.Blue;
+            this.LoginText.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.LoginText.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
+            this.LoginText.FontTextPreview = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Bold);
+            this.LoginText.ForeColor = System.Drawing.Color.Black;
+            this.LoginText.Location = new System.Drawing.Point(41, 55);
+            this.LoginText.Name = "LoginText";
+            this.LoginText.Size = new System.Drawing.Size(250, 40);
+            this.LoginText.TabIndex = 1;
+            this.LoginText.TextInput = "";
+            this.LoginText.TextPreview = "Логин";
+            this.LoginText.UseSystemPasswordChar = false;
             // 
-            // decaTextBox2
+            // PasswordText
             // 
-            this.decaTextBox2.BackColor = System.Drawing.Color.White;
-            this.decaTextBox2.BorderColor = System.Drawing.Color.LightBlue;
-            this.decaTextBox2.BorderColorNotActive = System.Drawing.Color.Blue;
-            this.decaTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.decaTextBox2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
-            this.decaTextBox2.FontTextPreview = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Bold);
-            this.decaTextBox2.ForeColor = System.Drawing.Color.Black;
-            this.decaTextBox2.Location = new System.Drawing.Point(41, 101);
-            this.decaTextBox2.Name = "decaTextBox2";
-            this.decaTextBox2.Size = new System.Drawing.Size(250, 40);
-            this.decaTextBox2.TabIndex = 2;
-            this.decaTextBox2.TextInput = "";
-            this.decaTextBox2.TextPreview = "Пароль";
-            this.decaTextBox2.UseSystemPasswordChar = true;
+            this.PasswordText.BackColor = System.Drawing.Color.White;
+            this.PasswordText.BorderColor = System.Drawing.Color.LightBlue;
+            this.PasswordText.BorderColorNotActive = System.Drawing.Color.Blue;
+            this.PasswordText.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PasswordText.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold);
+            this.PasswordText.FontTextPreview = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Bold);
+            this.PasswordText.ForeColor = System.Drawing.Color.Black;
+            this.PasswordText.Location = new System.Drawing.Point(41, 101);
+            this.PasswordText.Name = "PasswordText";
+            this.PasswordText.Size = new System.Drawing.Size(250, 40);
+            this.PasswordText.TabIndex = 2;
+            this.PasswordText.TextInput = "";
+            this.PasswordText.TextPreview = "Пароль";
+            this.PasswordText.UseSystemPasswordChar = true;
             // 
             // Form1
             // 
@@ -155,8 +156,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private Controls.DecaTextBox decaTextBox1;
-        private Controls.DecaTextBox decaTextBox2;
+        private Controls.DecaTextBox LoginText;
+        private Controls.DecaTextBox PasswordText;
         private System.Windows.Forms.Panel panel2;
         private Controls.DecaButton LogInButton;
         private System.Windows.Forms.Button ExitButton;
