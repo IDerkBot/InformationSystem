@@ -8,8 +8,8 @@ namespace InformationSystem
         public static Color GreenDark = ColorTranslator.FromHtml("#27ae60");
 
         public static Color Red = ColorTranslator.FromHtml("#e74c3c");
-        public static Color Red2 = ColorTranslator.FromHtml("#e81123");
-        public static Color RedDark = ColorTranslator.FromHtml("#c0392b");
+        public static Color RedDark = ColorTranslator.FromHtml("#e81123");
+        public static Color RedToxic = ColorTranslator.FromHtml("#c0392b");
 
         public static Color Blue = ColorTranslator.FromHtml("#3498db");
         public static Color BlueDark = ColorTranslator.FromHtml("#2980b9");
